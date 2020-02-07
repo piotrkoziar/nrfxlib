@@ -32,6 +32,7 @@ add_library(mbedcrypto_vanilla)
 #
 # Adding all standard compile/linker options (e.g. float ABI)
 #
+list(APPEND TOOLCHAIN_C_FLAGS -fshort-wchar)
 target_compile_options(mbedcrypto_vanilla PRIVATE ${TOOLCHAIN_C_FLAGS})
 target_ld_options(mbedcrypto_vanilla PRIVATE ${TOOLCHAIN_LD_FLAGS})
 
